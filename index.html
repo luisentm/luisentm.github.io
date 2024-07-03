@@ -13,7 +13,22 @@
 		</script>
 	</head>
 	<body>
-		<header-element></header-element>
-		<script type="module" src="./app.js"></script>
+		<script type="module">
+			import { createApp, ref } from 'vue'
+			
+			createApp({
+			  setup() {
+
+				const message = ref('Hello World!');
+			
+				return {
+				  message
+				}
+			  }
+			}).mount('#app')
+		</script>
+		<div id="app">
+			<h1>{{ message }}</h1>
+		</div>
 	</body>
 </html>
