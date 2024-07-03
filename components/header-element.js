@@ -1,12 +1,12 @@
-import {defineComponent} from 'vue';
-export default defineComponent({
-	props:[],
-	setup(){
-		const count = ref(0)
-		return { count }
-	},
-	template:`
-	<template>
-		<button @click="count++">You clicked me {{ count }} times.</button>
-	</template>`
-});
+import { ref } from 'vue'
+
+export default {
+  setup() {
+    const count = ref(0)
+    return { count }
+  },
+  template: `
+    <button @click="count++">
+      You clicked me {{ count }} times.
+    </button>`
+}
